@@ -3,9 +3,7 @@
 *
 */
 
-
-
-class LinkedListNode {
+export class LinkedListNode {
     data: number;
     next: null | LinkedListNode;
 
@@ -37,7 +35,7 @@ class LinkedListIterator {
     }
 }
 
-class LinkedList {
+export class LinkedList {
     head: LinkedListNode | null;
     tail: LinkedListNode | null ;
 
@@ -128,29 +126,3 @@ class LinkedList {
         }
     }
 }
-
-
-const linkedList: LinkedList = new LinkedList();
-
-linkedList.insertLast(1);
-linkedList.insertLast(2);
-linkedList.insertLast(3);
-linkedList.insertLast(4);
-
-// linkedList.printList();
-
-// @ts-ignore
-linkedList.insertAfter(linkedList.find(2), 98);
-
-// @ts-ignore
-linkedList.insertBefore(linkedList.find(98), 76);
-
-// @ts-ignore
-linkedList.deleteNode(linkedList.find(98));
-
-// @ts-ignore
-linkedList.deleteNode(linkedList.find(1));
-
-
-linkedList.printList();
-
