@@ -6,6 +6,8 @@
 * Operations: enqueue, dequeue, peek, size, and isEmpty
 *  */
 
+//TODO: Implement the queue on Array-Base.
+
 import { LinkedList, LinkedListNode } from "../2-LinkedList/linkedList";
 
 class Queue extends LinkedList {
@@ -40,15 +42,25 @@ class Queue extends LinkedList {
     if (this.head === null) return null;
     return this.head.data;
   }
-  // We stopped at 14:11
+
+  isEmpty() {
+    return this.head === null;
+  }
 }
 
 const queue = new Queue();
+console.log(queue.isEmpty())
 queue.enqueue(44);
+console.log(queue.isEmpty())
 queue.enqueue(13);
 
-queue.printList();
+// queue.printList();
 console.log(`Size: ${queue.size()}`);
+queue.printList();
 queue.dequeue();
+queue.dequeue();
+queue.enqueue(66);
+queue.enqueue(16);
+console.log(queue.peek())
 queue.printList();
 // console.log(queue)
